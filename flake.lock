@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "apple-emoji-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1711624089,
+        "narHash": "sha256-Glk61yudkHfUaTMlfUPLay/d6R/prmIt37oEWtVh+Qw=",
+        "owner": "oxcl",
+        "repo": "apple-emoji-nix",
+        "rev": "5b1a9d2513af73b5a23c7656e34d54a6bf76b34d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxcl",
+        "repo": "apple-emoji-nix",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742246081,
+        "narHash": "sha256-1e4oFbtdOOb6NqauHevWWjEUXZnfZ6RUAJJjn9i4YBc=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "c657142e24a43ea1035889f0b0a7c24598e0e18a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1742069588,
+        "narHash": "sha256-C7jVfohcGzdZRF6DO+ybyG/sqpo1h6bZi9T56sxLy+k=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "apple-emoji-nix": "apple-emoji-nix",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
