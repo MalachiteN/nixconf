@@ -27,6 +27,7 @@
     python311
     gcc
     git
+    git-credential-manager
     usbutils
     pciutils
     tree
