@@ -28,6 +28,7 @@
     gcc
     git
     git-credential-manager
+    libsecret
     usbutils
     pciutils
     tree
