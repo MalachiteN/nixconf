@@ -50,7 +50,7 @@
     bluez-tools
     cherry-studio
     rose-pine-hyprcursor
-    #networkmanagerapplet
+    tmux
     jq
     bc
     socat
@@ -61,7 +61,6 @@
     nix-index
   ];
 
-  #services.vnstat.enable = true;
   services.upower.enable = true;
 
   programs.appimage = {

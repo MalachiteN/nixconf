@@ -131,4 +131,88 @@
       ];
     };
   };
+
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      general = {
+        disable_loading_bar = true;
+      };
+      
+      animations = {
+        enabled = true;
+        bezier = "linear, 1, 1, 0, 0";
+        animation = [
+          "fadeIn, 1, 5, linear"
+          "fadeOut, 1, 5, linear"
+        ];
+      };
+      
+      background = [
+      {
+        path = "/home/mala/Pictures/Wallpaper/Kath.png";
+        blur_passes = 2;
+      }
+      ];
+      
+      shape = [
+      {
+        monitor = "";
+        size = "640, 1340";
+        halign = "left";
+        valign = "top";
+        position = "50,-50";
+        rounding = 20;
+        color = "rgba(255, 255, 255, 0.15)";
+      }
+      ];
+      
+      image = [
+      {
+        monitor = "";
+        path = "/home/$USER/.icon";
+        size = 180;
+        rounding = 20;
+        halign = "left";
+        valign = "center";
+        position = "255, 150";
+      }
+      ];
+      
+      label = [
+      {
+        monitor = "";
+        text = "$DESC";
+        font_size = 26;
+        font_family = "Fira Code Nerd Font";
+        halign = "left";
+        valign = "center";
+        position = "185, 0";
+      }
+      {
+        monitor = "";
+        text = "$TIME";
+        font_size = 130;
+        font_family = "Sarasa Term SC";
+        halign = "center";
+        valign = "center";
+        position = "345, 100";
+      }
+      ];
+
+      input-field = [
+      {
+        monitor = "";
+        dots_center = true;
+        fade_on_empty = false;
+        font_color = "rgb(202, 211, 245)";
+        inner_color = "rgb(91, 96, 120)";
+        outer_color = "rgb(24, 25, 38)";
+        halign = "left";
+        valign = "center";
+        position = "150, -100";
+      }
+      ];
+    };
+  };
 }
