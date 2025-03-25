@@ -93,7 +93,10 @@
       };
     };
   };
-
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = import ./hyprland.nix;
+  };
   services.hyprpaper = {
     enable = true;
     settings = {

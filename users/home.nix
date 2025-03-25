@@ -45,7 +45,7 @@
     };
     initExtra = ''
       function sep {
-        nohup "$@" >/dev/null 2>&1 & 
+        setsid -f "$@" >/dev/null 2>&1 
         disown
       }
 
