@@ -59,6 +59,7 @@
     wlr-protocols
     unzip
     nix-index
+    playerctl
   ];
 
   services.upower.enable = true;

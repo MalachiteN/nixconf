@@ -22,6 +22,7 @@
     thc-hydra
     sqlmap
     wl-clipboard
+    vlc
   ];
   
   programs.bat.enable = true;

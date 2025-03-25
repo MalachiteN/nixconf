@@ -29,6 +29,7 @@
       widgets = [
         "buttons-grid"
         "mpris"
+        "volume"
         "title"
         "dnd"
         "notifications"
@@ -48,7 +49,7 @@
         };
         volume = {
           label = "󰕾";
-          show-per-app = true;
+          show-per-app = false;
         };
         buttons-grid.actions = [
           {
@@ -170,7 +171,7 @@
       image = [
       {
         monitor = "";
-        path = "/home/$USER/.icon";
+        path = "/home/$USER/.face";
         size = 180;
         rounding = 20;
         halign = "left";
