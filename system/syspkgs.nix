@@ -60,6 +60,7 @@
     unzip
     nix-index
     playerctl
+    dxvk
   ];
 
   services.upower.enable = true;
