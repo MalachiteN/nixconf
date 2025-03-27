@@ -19,6 +19,9 @@
       positionX = "right";
       positionY = "top";
       layer = "overlay";
+      notification-window-width = 400;
+      hide-on-clear = true;
+      control-center-width = 400;
       control-center-margin-top = 10;
       control-center-margin-right = 10;
       notification-2fa-action = true;
