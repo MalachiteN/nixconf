@@ -31,6 +31,11 @@
     enable = true;
     userName = "MalachiteN";
     userEmail = "malachiten@163.com";
+    extraConfig = {
+      safe = {
+        directory = [ "/etc/nixos" ];
+      };
+    };
   };
 
   programs.zsh = {
