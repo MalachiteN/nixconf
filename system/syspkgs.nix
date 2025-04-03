@@ -48,9 +48,10 @@
     hyprsysteminfo
     bluez
     bluez-tools
+    htop
     cherry-studio
     rose-pine-hyprcursor
-    tmux
+    zellij
     jq
     bc
     socat
