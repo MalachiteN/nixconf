@@ -100,6 +100,8 @@
     XDG_SESSION_TYPE = "wayland";
     MOZ_ENABLE_WAYLAND = "1";
     FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
+    ZELLIJ_AUTO_ATTACH = "true";
+    ZELLIJ_AUTO_EXIT = "true";
   };
 
   # GNOME extensions

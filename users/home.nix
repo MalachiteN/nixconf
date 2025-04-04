@@ -23,6 +23,7 @@
     sqlmap
     wl-clipboard
     vlc
+    texlive.combined.scheme-medium
   ];
   
   programs.bat.enable = true;
@@ -66,6 +67,8 @@
         local dir=$(dirname `echo -n "$target"`)
         cd "$dir" || return 1
       }
+
+      eval "$(zellij setup --generate-auto-start zsh)"
     '';
   };
 }
