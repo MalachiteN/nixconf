@@ -4,8 +4,6 @@ let
 in
 {
   home.packages = with pkgs; [
-    crossPkgs.ubootQemuRiscv64Smode
-    crossPkgs.opensbi
     qemu
   ];
 }
