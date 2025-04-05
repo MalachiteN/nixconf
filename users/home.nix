@@ -23,7 +23,9 @@
     sqlmap
     wl-clipboard
     vlc
-    texlive.combined.scheme-medium
+    (texlive.combine {
+      inherit (texlive) scheme-medium collection-langchinese collection-latexextra collection-latexrecommended;
+    })
   ];
   
   programs.bat.enable = true;
@@ -67,8 +69,6 @@
         local dir=$(dirname `echo -n "$target"`)
         cd "$dir" || return 1
       }
-
-      eval "$(zellij setup --generate-auto-start zsh)"
     '';
   };
 }
