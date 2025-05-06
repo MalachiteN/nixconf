@@ -51,7 +51,7 @@
       nixusr = "cd /etc/nixos/users/";
       sn = "sudo nano";
     };
-    initExtra = ''
+    initContent = ''
       function sep {
         setsid -f "$@" >/dev/null 2>&1 
       }

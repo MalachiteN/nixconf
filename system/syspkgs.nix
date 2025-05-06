@@ -13,6 +13,12 @@
   programs.clash-verge.autoStart = true;
   programs.clash-verge.package = pkgs.clash-verge-rev;
   programs.clash-verge.enable = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "clash-verge-rev-2.2.3"
+    "clash-verge-rev-unwrapped-2.2.3"
+    "clash-verge-rev-webui-2.2.3"
+    "clash-verge-rev-service-2.2.3"
+  ];
   
   # List packages installed in system profile. To search, run:
   # $ nix search wget
