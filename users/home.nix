@@ -54,7 +54,6 @@
     initExtra = ''
       function sep {
         setsid -f "$@" >/dev/null 2>&1 
-        disown
       }
 
       function cdcmd {
@@ -69,6 +68,7 @@
         local dir=$(dirname `echo -n "$target"`)
         cd "$dir" || return 1
       }
+      eval "$(zellij setup --generate-auto-start zsh)"
     '';
   };
 }

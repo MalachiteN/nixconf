@@ -64,8 +64,6 @@
     dxvk
     mangohud
     libnotify
-    wineWowPackages.waylandFull
-    winetricks
   ];
 
   services.upower.enable = true;

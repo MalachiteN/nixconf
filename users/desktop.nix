@@ -9,8 +9,14 @@
     "Xft.hinting" = "1";
     "Xft.antialias" = "1";
     "Xft.rgba" = "rgb";
-    "Xcursor.theme" = "Adwaita";
+    "Xcursor.theme" = "Rose Pine";
     "Xcursor.size" = "38";
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.rose-pine-cursor;
+    name = "Rose Pine";
   };
 
   services.swaync = {
