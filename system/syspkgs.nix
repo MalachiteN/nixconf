@@ -70,6 +70,8 @@
     dxvk
     mangohud
     libnotify
+    nodejs_24
+    pnpm
   ];
 
   services.upower.enable = true;

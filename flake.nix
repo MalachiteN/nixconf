@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     apple-emoji-nix = {
-      url = "github:oxcl/apple-emoji-nix";
+      url = "github:MalachiteN/apple-emoji-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

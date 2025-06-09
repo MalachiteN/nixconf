@@ -43,7 +43,7 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome = {
   #  enable = true;
   #  # Enable fractional scaling
@@ -104,7 +104,7 @@
   };
 
   # GNOME extensions
-  services.gnome.core-utilities.enable = true;
+  services.gnome.core-apps.enable = true;
 
   services.dbus.enable = true;
 

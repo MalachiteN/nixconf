@@ -2,6 +2,7 @@
     monitor = ",preferred,auto,1.6";
     xwayland = {
       force_zero_scaling = true;
+      #use_nearest_neighbor = false;
     };
 
     env = [
@@ -14,7 +15,6 @@
     "$fileManager" = "nautilus";
     "$menu" = "wofi --show drun";
 
-    windowrule = "pseudo, fcitx";
     exec-once = [
         "xrdb -merge /home/mala/.Xresources"
         "waybar & hyprpaper & $terminal"
@@ -105,6 +105,7 @@
     misc = {
         force_default_wallpaper = -1;
         disable_hyprland_logo = false;
+        vrr = 1;
     };
     input = {
         kb_layout = "us";
