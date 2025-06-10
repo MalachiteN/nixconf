@@ -4,7 +4,7 @@
   users.users.mala = {
     isNormalUser = true;
     description = "Marisa Malachite";
-    extraGroups = [ "networkmanager" "wheel" "docker" "video" "audio" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" "audio" "gamemode" "libvirtd" "kvm" "input" ];
     home = "/home/mala";
     shell = pkgs.zsh;
   };

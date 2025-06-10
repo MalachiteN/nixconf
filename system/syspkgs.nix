@@ -2,6 +2,9 @@
 {
   # RISC-V Cross Compile
   nixpkgs.config.allowUnsupportedSystem = true;
+
+  # Virtualisation
+  programs.virt-manager.enable = true;
   
   # Install firefox.
   programs.firefox.enable = true;
@@ -72,6 +75,12 @@
     libnotify
     nodejs_24
     pnpm
+    virtio-win
+    spice
+    spice-gtk
+    spice-protocol
+    win-spice
+    OVMF
   ];
 
   services.upower.enable = true;

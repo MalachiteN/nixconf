@@ -15,6 +15,16 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.qemu = {
+    package = pkgs.qemu_kvm;
+    runAsRoot = true;
+    swtpm.enable = true;
+    vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
+
   # Configure network proxy if necessary
   networking.proxy.default = "http://127.0.0.1:7897/";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
