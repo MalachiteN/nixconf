@@ -80,8 +80,15 @@
     spice-gtk
     spice-protocol
     win-spice
-    OVMF
+    meld
   ];
+
+  services.syncthing = {
+    enable = true;
+    user = "mala";
+    dataDir = "/home/mala/Sync";
+    openDefaultPorts = true;
+  };
 
   services.upower.enable = true;
 
@@ -123,7 +130,6 @@
   
   programs.steam = {
     enable = true;
-    #extest.enable = true;
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
     fontPackages = with pkgs; [ noto-fonts-cjk-sans ];
     protontricks.enable = true;
