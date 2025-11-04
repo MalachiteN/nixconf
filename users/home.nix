@@ -1,4 +1,17 @@
 { config, lib, pkgs, ... }:
+let
+  wechatWithEnv = pkgs.symlinkJoin {
+    name = "wechat-with-env";
+    paths = [ pkgs.wechat ];
+    buildInputs = [ pkgs.makeWrapper ];
+    postBuild = ''
+      wrapProgram $out/bin/wechat \
+        --set QT_IM_MODULE "fcitx" \
+        --set GTK_IM_MODULE "fcitx" \
+        --set XMODIFIERS "@im=fcitx"
+    '';
+  };
+in
 {
   imports = [
     ./desktop.nix
@@ -11,8 +24,10 @@
   
   home.packages = with pkgs; [
     qq
+    wechatWithEnv
     vscode
     eza
+    kdePackages.k3b
     btop
     onlyoffice-desktopeditors
     hyfetch

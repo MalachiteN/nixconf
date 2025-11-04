@@ -52,26 +52,11 @@
     enable32Bit = true;
   };
 
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome = {
-  #  enable = true;
-  #  # Enable fractional scaling
-  #  extraGSettingsOverridePackages = [pkgs.mutter];
-  #  extraGSettingsOverrides = ''
-  #    [org.gnome.mutter]
-  #    experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
-  #  '';
-  #};
+  # Enable the KDE Plasma 6 Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.ssh.askPassword = lib.mkForce "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
-
-  services.hypridle.enable = true;
-  programs.hyprlock.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure keymap in X11
@@ -114,7 +99,7 @@
   };
 
   # GNOME extensions
-  services.gnome.core-apps.enable = true;
+  # services.gnome.core-apps.enable = true;
 
   services.dbus.enable = true;
 

@@ -1,0 +1,24 @@
+diff --git a/data/autosuspend.hwdb b/data/autosuspend.hwdb
+index b0804b6..09f6376 100644
+--- a/data/autosuspend.hwdb
++++ b/data/autosuspend.hwdb
+@@ -264,6 +264,7 @@ usb:v06CBp0126*
+ usb:v06CBp0129*
+ usb:v06CBp015F*
+ usb:v06CBp0168*
++usb:v06CBp0169*
+ usb:v06CBp016C*
+ usb:v06CBp0173*
+ usb:v06CBp0174*
+diff --git a/libfprint/drivers/synaptics/synaptics.c b/libfprint/drivers/synaptics/synaptics.c
+index 8b13093..2c22285 100644
+--- a/libfprint/drivers/synaptics/synaptics.c
++++ b/libfprint/drivers/synaptics/synaptics.c
+@@ -53,6 +53,7 @@ static const FpIdEntry id_table[] = {
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x0129,  },
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x015F,  },
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x0168,  },
++  { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x0169,  },
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x016C,  },
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x0173,  },
+   { .vid = SYNAPTICS_VENDOR_ID,  .pid = 0x0174,  },
