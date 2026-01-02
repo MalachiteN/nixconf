@@ -1,8 +1,5 @@
 {config, pkgs, ...}:
 {
-  # RISC-V Cross Compile
-  nixpkgs.config.allowUnsupportedSystem = true;
-
   # Virtualisation
   programs.virt-manager.enable = true;
   
@@ -16,12 +13,6 @@
   programs.clash-verge.autoStart = true;
   programs.clash-verge.package = pkgs.clash-verge-rev;
   programs.clash-verge.enable = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "clash-verge-rev-2.2.3"
-    "clash-verge-rev-unwrapped-2.2.3"
-    "clash-verge-rev-webui-2.2.3"
-    "clash-verge-rev-service-2.2.3"
-  ];
   
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -30,7 +21,7 @@
     wget
     gparted
     conda
-    fcitx5-configtool
+    qt6Packages.fcitx5-configtool
     rime-data
     libappindicator
     libdbusmenu
@@ -46,16 +37,10 @@
     lsof
     oh-my-zsh
     brightnessctl
-    swaynotificationcenter
     alacritty
     kitty
-    hyprpolkitagent
-    wofi
-    waybar
-    hyprpaper
-    hyprshot
     hyprcursor
-    hyprsysteminfo
+    openssl_oqs
     bluez
     bluez-tools
     htop
@@ -82,6 +67,9 @@
     spice-protocol
     win-spice
     meld
+    llvmPackages_20.clang-unwrapped
+    llvmPackages_20.clang-tools
+    p7zip
   ];
 
   services.syncthing = {

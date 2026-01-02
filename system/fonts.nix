@@ -6,7 +6,7 @@
     noto-fonts-cjk-sans
     sarasa-gothic
     wqy_zenhei
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     inputs.apple-emoji-nix.packages.x86_64-linux.apple-emoji-nix
     pkgs.nerd-fonts.fira-code
   ];

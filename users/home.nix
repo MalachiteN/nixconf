@@ -25,7 +25,6 @@ in
   home.packages = with pkgs; [
     qq
     wechatWithEnv
-    vscode
     eza
     kdePackages.k3b
     btop
@@ -36,8 +35,10 @@ in
     nmap
     thc-hydra
     sqlmap
+    vscode-fhs
     wl-clipboard
     vlc
+    obsidian
     (texlive.combine {
       inherit (texlive) scheme-medium collection-langchinese collection-latexextra collection-latexrecommended;
     })
@@ -47,9 +48,11 @@ in
   
   programs.git = {
     enable = true;
-    userName = "MalachiteN";
-    userEmail = "malachiten@163.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "MalachiteN";
+        email = "malachiten@163.com";
+      };
       safe = {
         directory = [ "/etc/nixos" ];
       };
