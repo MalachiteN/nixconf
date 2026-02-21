@@ -11,9 +11,13 @@
       url = "github:MalachiteN/apple-emoji-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agent-browser-flake = {
+      url = "github:MalachiteN/agent-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, apple-emoji-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, apple-emoji-nix, agent-browser-flake, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";

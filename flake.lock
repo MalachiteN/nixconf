@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "agent-browser-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771575639,
+        "narHash": "sha256-srFAExxcV9bDKxC0YhMVg4pkqu34XmFV3nXOXdSS+TE=",
+        "owner": "MalachiteN",
+        "repo": "agent-browser-flake",
+        "rev": "a39c72fc1fce0e9d4f2ecb7b8448e82e136fa389",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MalachiteN",
+        "repo": "agent-browser-flake",
+        "type": "github"
+      }
+    },
     "apple-emoji-nix": {
       "inputs": {
         "nixpkgs": [
@@ -27,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767104570,
-        "narHash": "sha256-GKgwu5//R+cLdKysZjGqvUEEOGXXLdt93sNXeb2M/Lk=",
+        "lastModified": 1771683283,
+        "narHash": "sha256-WxAEkAbo8dP7qiyPM6VN4ZGAxfuBVlNBNPkrqkrXVEc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e4e78a2cbeaddd07ab7238971b16468cc1d14daf",
+        "rev": "c6ed3eab64d23520bcbb858aa53fe2b533725d4a",
         "type": "github"
       },
       "original": {
@@ -43,11 +63,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1767116409,
-        "narHash": "sha256-5vKw92l1GyTnjoLzEagJy5V5mDFck72LiQWZSOnSicw=",
+        "lastModified": 1771369470,
+        "narHash": "sha256-0NBlEBKkN3lufyvFegY4TYv5mCNHbi5OmBDrzihbBMQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "cad22e7d996aea55ecab064e84834289143e44a0",
+        "rev": "0182a361324364ae3f436a63005877674cf45efb",
         "type": "github"
       },
       "original": {
@@ -59,6 +79,7 @@
     },
     "root": {
       "inputs": {
+        "agent-browser-flake": "agent-browser-flake",
         "apple-emoji-nix": "apple-emoji-nix",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"

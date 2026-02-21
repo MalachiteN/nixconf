@@ -26,7 +26,6 @@ in
     qq
     wechatWithEnv
     eza
-    kdePackages.k3b
     btop
     onlyoffice-desktopeditors
     hyfetch
@@ -45,7 +44,19 @@ in
   ];
   
   programs.bat.enable = true;
-  
+ 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "github.com" = {
+        proxyCommand = "nc -X connect -x 127.0.0.1:7897 %h %p";
+      };
+      "111.229.242.175" = {
+        user = "mala";
+      };
+    };
+  };
+ 
   programs.git = {
     enable = true;
     settings = {
@@ -53,6 +64,8 @@ in
         name = "MalachiteN";
         email = "malachiten@163.com";
       };
+      http.proxy = "http://127.0.0.1:7897";
+      https.proxy = "http://127.0.0.1:7897";
       safe = {
         directory = [ "/etc/nixos" ];
       };

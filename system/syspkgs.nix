@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, inputs, ...}:
 {
   # Virtualisation
   programs.virt-manager.enable = true;
@@ -13,12 +13,20 @@
   programs.clash-verge.autoStart = true;
   programs.clash-verge.package = pkgs.clash-verge-rev;
   programs.clash-verge.enable = true;
-  
+  programs.clash-verge.serviceMode = true;
+  programs.clash-verge.tunMode = true;
+ 
+  nixpkgs.overlays = [
+    inputs.agent-browser-flake.overlays.default
+  ];
+ 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    vsce
+    agent-browser
     gparted
     conda
     qt6Packages.fcitx5-configtool
